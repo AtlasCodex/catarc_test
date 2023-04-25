@@ -43,7 +43,7 @@ class DDT:
                   './ddt/test_%s_%d.py' % (self.type, self.story_idx,))
         pytest.main(['-s', './ddt/test_%s_%d.py' % (self.type, self.story_idx,), '--alluredir', 'result'])
 
-    def run_web_case(self, filepath='./lib/cases/电商项目用例.xlsx'):
+    def run_web_case(self, filepath='./lib/cases/测试用例.xlsx'):
         self.type = 'web'
         reader = get_reader(filepath)
         sheetname = reader.get_sheets()
@@ -89,6 +89,7 @@ class DDT:
                 else:
                     # 记录一组用例的数据
                     case.append(line)
+                
 
             # 一个sheet统计完成，把最后一个用例添加到模块里面
             # 并且执行最后一个sheet

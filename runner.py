@@ -1,6 +1,4 @@
-import io
 import os
-import sys
 
 from ddt.excel_ddt import ddt
 
